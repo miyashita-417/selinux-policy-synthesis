@@ -30,7 +30,7 @@ mydaemon\_tがPIDファイルを削除する。
 
 
 
-$\\phi\_{pid}$ = $ (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) $
+$\\phi\_{pid}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True})$
 
 &nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
 
