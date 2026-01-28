@@ -248,5 +248,33 @@ $$
 
 \&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{bind}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{http\\\_cache\\\_port\\\_t}, \\texttt{tcp\\\_socket}, \\
+\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{http\\\_cache\\\_port\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{name\\\_bind}) = \\mathrm{True}) \\\\
+
+\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{node\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{node\\\_bind}) = \\mathrm{True}) \\\\
+
+\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{listen}) = \\mathrm{True})
+
+\\end{aligned}
+
+$$
+
+
+
+---
+
+
+
+\## 統合された全体制約
+
+
+
+最終的にSMTソルバに入力される制約 $\\phi$ は、上記全ての論理積となる。
+
+
+
+$$
+
+\\phi = \\phi\_{pid} \\land \\phi\_{conf} \\land \\phi\_{log} \\land \\phi\_{common} \\land \\phi\_{net}
+
+$$
 
