@@ -28,6 +28,8 @@ mydaemon\_tがPIDファイルを削除する。
 
 上記のPIDファイル制御に関する要件を、論理制約 $\\phi\_{pid}$ として以下のように定義する。
 
+```math
+
 \\begin{small}
 
 \\begin{equation}
@@ -65,6 +67,8 @@ mydaemon\_tがPIDファイルを削除する。
 \\end{equation}
 
 \\end{small}
+
+```
 
 
 
