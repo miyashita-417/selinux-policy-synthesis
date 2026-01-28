@@ -44,27 +44,27 @@ $$
 
 \\begin{aligned}
 
-\\phi\_{pid} \&= (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+\\phi\_{pid} \&= (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_run\\\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_run\\\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_run\\\\\_t}, \\texttt{dir}, \\texttt{add\\\\\_name}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{remove\\\_name}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_run\\\\\_t}, \\texttt{dir}, \\texttt{remove\\\\\_name}) = \\mathrm{True}) \\\\
 
-\&\\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{file}, \\texttt{mydaemon\\\_var\\\_run\\\_t}) = \\mathrm{True}) \\\\
+\&\\land (type\\\_transition(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{write}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{write}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{lock}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{lock}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{unlink}) = \\mathrm{True})
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_var\\\\\_run\\\\\_t}, \\texttt{file}, \\texttt{unlink}) = \\mathrm{True})
 
 \\end{aligned}
 
@@ -102,15 +102,15 @@ $$
 
 \\begin{aligned}
 
-\\phi\_{conf} \&= (allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+\\phi\_{conf} \&= (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{etc\\\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{etc\\\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_conf\\\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{read}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_conf\\\\\_t}, \\texttt{file}, \\texttt{read}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True})
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_conf\\\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True})
 
 \\end{aligned}
 
@@ -154,21 +154,21 @@ $$
 
 \\begin{aligned}
 
-\\phi\_{log} \&= (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+\\phi\_{log} \&= (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_log\\\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_log\\\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_log\\\\\_t}, \\texttt{dir}, \\texttt{add\\\\\_name}) = \\mathrm{True}) \\\\
 
-\&\\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{file}, \\texttt{mydaemon\\\_log\\\_t}) = \\mathrm{True}) \\\\
+\&\\land (type\\\_transition(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_log\\\\\_t}, \\texttt{file}, \\texttt{mydaemon\\\\\_log\\\\\_t}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_log\\\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_log\\\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_log\\\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{append}) = \\mathrm{True})
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_log\\\\\_t}, \\texttt{file}, \\texttt{append}) = \\mathrm{True})
 
 \\end{aligned}
 
@@ -200,9 +200,9 @@ $$
 
 \\begin{aligned}
 
-\\phi\_{common} \&= (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+\\phi\_{common} \&= (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True})
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{var\\\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True})
 
 \\end{aligned}
 
@@ -242,17 +242,17 @@ $$
 
 \\begin{aligned}
 
-\\phi\_{net} \&= (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{create}) = \\mathrm{True}) \\\\
+\\phi\_{net} \&= (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_t}, \\texttt{tcp\\\\\_socket}, \\texttt{create}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{setopt}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_t}, \\texttt{tcp\\\\\_socket}, \\texttt{setopt}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{bind}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_t}, \\texttt{tcp\\\\\_socket}, \\texttt{bind}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{http\\\_cache\\\_port\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{name\\\_bind}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{http\\\\\_cache\\\\\_port\\\\\_t}, \\texttt{tcp\\\\\_socket}, \\texttt{name\\\\\_bind}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{node\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{node\\\_bind}) = \\mathrm{True}) \\\\
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{node\\\\\_t}, \\texttt{tcp\\\\\_socket}, \\texttt{node\\\\\_bind}) = \\mathrm{True}) \\\\
 
-\&\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{listen}) = \\mathrm{True})
+\&\\land (allow(\\texttt{mydaemon\\\\\_t}, \\texttt{mydaemon\\\\\_t}, \\texttt{tcp\\\\\_socket}, \\texttt{listen}) = \\mathrm{True})
 
 \\end{aligned}
 
