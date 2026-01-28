@@ -28,37 +28,31 @@ mydaemon\_tがPIDファイルを削除する。
 
 上記のPIDファイル制御に関する要件を、論理制約 $\\phi\_{pid}$ として以下のように定義する。
 
-```math
 
-\\begin{small}
 
-\\begin{equation}
+$\\phi\_{pid}$ = $ (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) $
 
-&nbsp;\\begin{split}
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
 
-&nbsp; \\phi\_{pid} = \& (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{remove\\\_name}) = \\mathrm{True})
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{file}, \\\\
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{remove\\\_name}) = \\mathrm{True})
+&nbsp;              $ \\qquad \\qquad \\texttt{mydaemon\\\_var\\\_run\\\_t}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{file}, \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\qquad \\qquad \\texttt{mydaemon\\\_var\\\_run\\\_t}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{write}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{write}) = \\mathrm{True}) \\\\
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{lock}) = \\mathrm{True}) \\\\
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
-
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{lock}) = \\mathrm{True}) \\\\
-
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{unlink}) = \\mathrm{True})
+&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{unlink}) = \\mathrm{True})
 
 &nbsp;              
 
@@ -67,8 +61,6 @@ mydaemon\_tがPIDファイルを削除する。
 \\end{equation}
 
 \\end{small}
-
-```
 
 
 
