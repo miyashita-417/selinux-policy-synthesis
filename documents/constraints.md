@@ -56,7 +56,7 @@ $\\phi\_{pid}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\t
 
 
 
-
+---
 
 
 
@@ -92,7 +92,7 @@ $\\phi\_{conf}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{
 
 
 
-
+---
 
 
 
@@ -140,7 +140,7 @@ $\\phi\_{log}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\t
 
 
 
-
+---
 
 
 
@@ -164,7 +164,7 @@ $\\phi\_{common}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\textt
 
 
 
-
+---
 
 
 
