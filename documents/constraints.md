@@ -30,37 +30,29 @@ mydaemon\_tがPIDファイルを削除する。
 
 
 
-$\\phi\_{pid}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True})$
+$\\phi\_{pid}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{remove\\\_name}) = \\mathrm{True})
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{dir}, \\texttt{remove\\\_name}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{file}, \\\\
+&nbsp;              $\\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_run\\\_t}, \\texttt{file}, \\texttt{mydaemon\\\_var\\\_run\\\_t}) = \\mathrm{True}) $
 
-&nbsp;              $ \\qquad \\qquad \\texttt{mydaemon\\\_var\\\_run\\\_t}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{write}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{write}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{lock}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{lock}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{unlink}) = \\mathrm{True}) $
 
-&nbsp;              $ \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_var\\\_run\\\_t}, \\texttt{file}, \\texttt{unlink}) = \\mathrm{True})
 
-&nbsp;              
-
-&nbsp;\\end{split}
-
-\\end{equation}
-
-\\end{small}
 
 
 
@@ -88,27 +80,15 @@ mydaemon\_tが設定ファイルの属性情報を参照する。
 
 
 
-\\begin{small}
+$\\phi\_{conf}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) $
 
-\\begin{equation}
+&nbsp;               $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True}) $
 
-&nbsp;\\begin{split}
+&nbsp;               $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) $
 
-&nbsp; \\phi\_{conf} = \& (allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+&nbsp;               $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{read}) = \\mathrm{True}) $
 
-&nbsp;               \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{etc\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True}) \\\\
-
-&nbsp;               \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
-
-&nbsp;               \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{read}) = \\mathrm{True}) \\\\
-
-&nbsp;               \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True})
-
-&nbsp;\\end{split}
-
-\\end{equation}
-
-\\end{small}
+&nbsp;               $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_conf\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) $
 
 
 
@@ -142,35 +122,21 @@ mydaemon\_tがログファイルの末尾にデータを追加する。
 
 
 
-\\begin{small}
+$\\phi\_{log}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) $
 
-\\begin{equation}
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) $
 
-&nbsp;\\begin{split}
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) $
 
-&nbsp; \\phi\_{log} = \& (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{file}, \\texttt{mydaemon\\\_log\\\_t}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{write}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{dir}, \\texttt{add\\\_name}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (type\\\_transition(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_log\\\_t}, \\texttt{file}, \\\\
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) $
 
-&nbsp;              \& \\qquad \\qquad \\texttt{mydaemon\\\_log\\\_t}) = \\mathrm{True}) \\\\
-
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{create}) = \\mathrm{True}) \\\\
-
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{open}) = \\mathrm{True}) \\\\
-
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{getattr}) = \\mathrm{True}) \\\\
-
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{append}) = \\mathrm{True})
-
-&nbsp;\\end{split}
-
-\\end{equation}
-
-\\end{small}
+&nbsp;              $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_log\\\_t}, \\texttt{file}, \\texttt{append}) = \\mathrm{True}) $
 
 
 
@@ -192,21 +158,9 @@ mydaemon\_tが上位ディレクトリの属性情報を参照する。
 
 
 
-\\begin{small}
+$\\phi\_{common}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) $
 
-\\begin{equation}
-
-&nbsp;\\begin{split}
-
-&nbsp; \\phi\_{common} = \& (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\texttt{dir}, \\texttt{search}) = \\mathrm{True}) \\\\
-
-&nbsp;                 \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True})
-
-&nbsp;\\end{split}
-
-\\end{equation}
-
-\\end{small}
+&nbsp;                 $\\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{var\\\_t}, \\texttt{dir}, \\texttt{getattr}) = \\mathrm{True}) $
 
 
 
