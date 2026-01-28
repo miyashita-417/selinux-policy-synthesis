@@ -240,15 +240,15 @@ mydaemon\_tが接続待ち状態にする。
 
 
 
-$$  \\phi\_{net} = \& (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{create}) = \\mathrm{True}) \\\\
+$$ $\\phi\_{net}$ = $(allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{create}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{setopt}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land$ $(allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{setopt}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{bind}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land$ $(allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{bind}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{http\\\_cache\\\_port\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{name\\\_bind}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land$ $(allow(\\texttt{mydaemon\\\_t}, \\texttt{http\\\_cache\\\_port\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{name\\\_bind}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{node\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{node\\\_bind}) = \\mathrm{True}) \\\\
+&nbsp;              $\\land$ $(allow(\\texttt{mydaemon\\\_t}, \\texttt{node\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{node\\\_bind}) = \\mathrm{True}) $
 
-&nbsp;              \& \\land (allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{listen}) = \\mathrm{True}) $$
+&nbsp;              $\\land$ $(allow(\\texttt{mydaemon\\\_t}, \\texttt{mydaemon\\\_t}, \\texttt{tcp\\\_socket}, \\texttt{listen}) = \\mathrm{True}) $ $$
 
